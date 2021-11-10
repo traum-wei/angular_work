@@ -20,6 +20,10 @@ export class ArticleListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  doChangeTitle(newTitle: string): void {
+    this.article.title = newTitle;
+  }
+
 }
 
 

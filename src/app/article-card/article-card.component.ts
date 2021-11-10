@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { Article } from '../shared/models/article.model';
 
@@ -10,10 +10,15 @@ import { Article } from '../shared/models/article.model';
 export class ArticleCardComponent implements OnInit {
 
   @Input() article!: Article;
+  @Output() changeTitle = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onChangeTitle(): void {
+    this.changeTitle.emit('Title Changed!!!!!');
   }
 
 }

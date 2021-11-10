@@ -2,7 +2,11 @@
   <!-- Blog entries-->
   <div class="col-lg-8">
       <!-- Featured blog post-->
-      <app-article-card [article]="article"></app-article-card>
+      <app-article-card
+        [article]="article"
+        (changeTitle)="doChangeTitle($event)"
+        >
+      </app-article-card>
       <!-- Nested row for non-featured blog posts-->
       <div class="row">
           <div class="col-lg-6">
