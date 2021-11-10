@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Article } from '../shared/models/article.model';
+
 @Component({
   templateUrl: './article-list.component.html',
   styleUrls: ['./article-list.component.css']
@@ -20,9 +22,4 @@ export class ArticleListComponent implements OnInit {
 
 }
 
-interface Article {
-  coverImg: string;
-  createDate: string;
-  title: string;
-  description: string;
-}
+
