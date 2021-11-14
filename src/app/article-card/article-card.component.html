@@ -4,6 +4,6 @@
       <div class="small text-muted">{{ article.createDate }}</div>
       <h2 class="card-title">{{ article.title }}</h2>
       <p class="card-text">{{ article.description}}</p>
-      <a class="btn btn-primary" (click)="onChangeTitle()">Change Title</a>
+      <a class="btn btn-primary" (click)="onChangeTitle()" *appHasAdminPermission>Change Title</a>
   </div>
 </div>

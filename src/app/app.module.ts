@@ -7,6 +7,7 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleCardComponent } from './article-card/article-card.component';
+import { HasAdminPermissionDirective } from './shared/directives/has-admin-permission.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ArticleCardComponent } from './article-card/article-card.component';
     HeaderComponent,
     FooterComponent,
     ArticleListComponent,
-    ArticleCardComponent
+    ArticleCardComponent,
+    HasAdminPermissionDirective
   ],
   imports: [
     BrowserModule,
