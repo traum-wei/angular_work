@@ -1,9 +1,11 @@
 <div class="row">
   <!-- Blog entries-->
-  <div class="col-lg-8">
+  <div class="col-lg-8" style="display: flex; flex-wrap: wrap;">
       <!-- Featured blog post-->
       <app-article-card
-        *ngFor="let article of articleList"
+        *ngFor="let article of articleList; first as isFirst"
+        [class.col-lg-6]="!isFirst"
+        style="padding: 10px"
         [article]="article"
         (changeTitle)="doChangeTitle($event)">
       </app-article-card>
