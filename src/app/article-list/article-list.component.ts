@@ -8,12 +8,26 @@ import { Article } from '../shared/models/article.model';
 })
 export class ArticleListComponent implements OnInit {
 
-  article: Article = {
-    coverImg: 'https://dummyimage.com/850x350/dee2e6/6c757d.jpg',
-    createDate: 'January 1, 2021',
-    title: 'Featured Post Title',
+  articleList: Article[] = [{
+    coverImg: 'https://angular.tw/assets/images/logos/angular/angular.svg',
+    createDate: 'November 15, 2021',
+    title: 'Angular Day5: Directives',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!',
-  }
+    },
+    {
+      coverImg: 'https://angular.tw/assets/images/logos/angular/angular.svg',
+      createDate: 'November 10, 2021',
+      title: 'Angular Day4: Components',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!',
+    },
+    {
+      coverImg: 'https://angular.tw/assets/images/logos/angular/angular.svg',
+      createDate: 'November 8, 2021',
+      title: 'Angular Day3: Angular Core Concepts',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!',
+    }
+  ];
+
 
   constructor() { }
 
@@ -21,7 +35,7 @@ export class ArticleListComponent implements OnInit {
   }
 
   doChangeTitle(newTitle: string): void {
-    this.article.title = newTitle;
+    // this.article.title = newTitle;
   }
 
 }
