@@ -2,7 +2,11 @@
   <!-- Blog entries-->
   <div class="col-lg-8">
       <!-- Featured blog post-->
-      <app-article-card [article]="articleList[0]" (changeTitle)="doChangeTitle($event)"></app-article-card>
+      <app-article-card
+        *ngFor="let article of articleList"
+        [article]="article"
+        (changeTitle)="doChangeTitle($event)">
+      </app-article-card>
 
       <!-- Pagination-->
       <nav aria-label="Pagination">
