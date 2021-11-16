@@ -1,22 +1,46 @@
-<form>
+<form #tForm="ngForm">
   <div class="col-md-12">
-    <label for="account">Account</label>
-     <input class="form-control" type="text" name="account" id="account" required>
-     <div class="text-danger">Account field cannot be blank!</div>
+     <label for="account">Account</label>
+     <input
+      class="form-control"
+      type="text"
+      name="account"
+      id="account"
+      ngModel
+      required
+      #tAccount="ngModel">
+     <div class="text-danger" *ngIf="tAccount.invalid">Account field cannot be blank!</div>
   </div>
 
   <div class="col-md-12">
-  <label for="password">Password</label>
-    <input class="form-control" type="password" name="password" id="password" required>
-    <div class="text-danger">Password field cannot be blank!</div>
+    <label for="password">Password</label>
+    <input
+      class="form-control"
+      type="password"
+      name="password"
+      id="password"
+      ngModel
+      required
+      #tPassword="ngModel">
+    <div class="text-danger" *ngIf="tPassword.invalid">Password field cannot be blank!</div>
   </div>
 
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="rememberMe">
-    <label class="form-check-label" for="rememberMe">Remember Me</label>
+    <input
+      class="form-check-input"
+      type="checkbox"
+      name="keepLogin"
+      id="keepLogin"
+      ngModel
+      #tKeepLogin="ngModel">
+    <label class="form-check-label" for="keepLogin">Remember Me</label>
   </div>
 
   <div class="form-button mt-3">
     <button id="submit" type="submit" class="btn btn-primary">Login</button>
   </div>
  </form>
+
+ <pre>
+  {{ tForm.value | json}}
+ </pre>
