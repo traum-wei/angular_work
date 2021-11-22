@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="articleFormGroup">
   <div class="col-md-12">
       <label for="title">Title</label>
       <input
@@ -6,7 +6,16 @@
           type="text"
           name="title"
           id="title"
+          formControlName="title"
       >
+  </div>
+  <div
+      class="text-danger"
+      *ngIf="articleFormGroup.get('title')?.touched &&
+              articleFormGroup.get('title')?.errors &&
+              articleFormGroup.get('title')?.errors!['required']"
+  >
+      此欄位必填
   </div>
 
   <div class="col-md-12">
@@ -16,7 +25,16 @@
           type="text"
           name="description"
           id="description"
+          formControlName="description"
       >
+  </div>
+  <div
+      class="text-danger"
+      *ngIf="articleFormGroup.get('description')?.touched &&
+              articleFormGroup.get('description')?.errors &&
+              articleFormGroup.get('description')?.errors!['required']"
+  >
+      此欄位必填
   </div>
 
   <div class="col-md-12">
@@ -26,7 +44,16 @@
           type="text"
           name="createDate"
           id="createDate"
+          formControlName="createDate"
       >
+  </div>
+  <div
+      class="text-danger"
+      *ngIf="articleFormGroup.get('createDate')?.touched &&
+              articleFormGroup.get('createDate')?.errors &&
+              articleFormGroup.get('createDate')?.errors!['required']"
+  >
+      此欄位必填
   </div>
 
   <div class="col-md-12">
@@ -36,6 +63,15 @@
           type="text"
           name="coverImg"
           id="coverImg"
+          formControlName="coverImg"
       >
+  </div>
+  <div
+      class="text-danger"
+      *ngIf="articleFormGroup.get('coverImg')?.touched &&
+              articleFormGroup.get('coverImg')?.errors &&
+              articleFormGroup.get('coverImg')?.errors!['required']"
+  >
+      此欄位必填
   </div>
 </form>
