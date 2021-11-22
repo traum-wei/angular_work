@@ -10,6 +10,7 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleCardComponent } from './article-card/article-card.component';
 import { HasAdminPermissionDirective } from './shared/directives/has-admin-permission.directive';
 import { LoginComponent } from './login/login.component';
+import { ArticleEditComponent } from './article-edit/article-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     ArticleListComponent,
     ArticleCardComponent,
     HasAdminPermissionDirective,
-    LoginComponent
+    LoginComponent,
+    ArticleEditComponent
   ],
   imports: [
     BrowserModule,
