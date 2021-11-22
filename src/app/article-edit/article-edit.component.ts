@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ValidatorUtil } from '../shared/util/validator.util';
 
 @Component({
   selector: 'app-article-edit',
@@ -11,7 +12,8 @@ export class ArticleEditComponent implements OnInit {
   articleFormGroup: FormGroup = new FormGroup({
     title: new FormControl(
       'Angular Day7: Reactive Forms',
-      { validators: [ Validators.required ] }
+      { validators: [ Validators.required,
+        ValidatorUtil.includesAngularValidatorFn() ] }
     ),
     description: new FormControl(
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!',

@@ -9,14 +9,24 @@
           formControlName="title"
       >
   </div>
-  <div
-      class="text-danger"
+
+  <ng-container
       *ngIf="articleFormGroup.get('title')?.touched &&
-              articleFormGroup.get('title')?.errors &&
-              articleFormGroup.get('title')?.errors!['required']"
+              articleFormGroup.get('title')?.errors"
   >
-      此欄位必填
-  </div>
+      <div
+          class="text-danger"
+          *ngIf="articleFormGroup.get('title')?.errors!['required']"
+      >
+          此欄位必填
+      </div>
+      <div
+          class="text-danger"
+          *ngIf="articleFormGroup.get('title')?.errors!['includesValidator']"
+      >
+          Title 請包含 「Angular」
+      </div>
+  </ng-container>
 
   <div class="col-md-12">
       <label for="description">Description</label>
