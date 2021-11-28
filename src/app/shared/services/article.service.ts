@@ -20,5 +20,9 @@ export class ArticleService {
     return this.http.get<Article[]>(`http://localhost:3000/article`);
   }
 
+  editArticle(articleId: number,article: Article): any {
+    return this.http.patch(`http://localhost:3000/article/${articleId}`, article);
+  }
+
 }
 

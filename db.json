@@ -3,24 +3,23 @@
     {
       "id": 1,
       "coverImg": "https://angular.tw/assets/images/logos/angular/angular.svg",
-      "createDate": "November 15, 2021",
-      "title": "Angular Day5: Directives",
+      "createDate": "November 28, 2021",
+      "title": "Angular Day9: Routing and Navigation ",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!"
-      },
-      {
-        "id": 2,
-        "coverImg": "https://angular.tw/assets/images/logos/angular/angular.svg",
-        "createDate": "November 10, 2021",
-        "title": "Angular Day4: Components",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!"
-      },
-      {
-        "id": 3,
-        "coverImg": "https://angular.tw/assets/images/logos/angular/angular.svg",
-        "createDate": "November 8, 2021",
-        "title": "Angular Day3: Angular Core Concepts",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!"
-      }
+    },
+    {
+      "id": 2,
+      "coverImg": "https://angular.tw/assets/images/logos/angular/angular.svg",
+      "createDate": "November 10, 2021",
+      "title": "Angular Day4: Components",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!"
+    },
+    {
+      "id": 3,
+      "coverImg": "https://angular.tw/assets/images/logos/angular/angular.svg",
+      "createDate": "November 8, 2021",
+      "title": "Angular Day3: Angular Core Concepts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!"
+    }
   ]
 }
-

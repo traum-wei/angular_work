@@ -25,7 +25,7 @@ export class ArticleCardComponent implements OnInit {
   }
 
   editArticle(): void {
-    this.router.navigate(['article-edit']);
+    this.router.navigate([`article-edit/${this.article.id}`]);
   }
 
 }

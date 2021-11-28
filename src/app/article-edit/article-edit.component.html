@@ -84,4 +84,10 @@
   >
       此欄位必填
   </div>
+  <button
+    type="button"
+    class="my-5"
+    (click)="onArticleChange(articleFormGroup.value)"
+    [disabled]="articleFormGroup.invalid || articleFormGroup.pristine"
+    >Save</button>
 </form>
