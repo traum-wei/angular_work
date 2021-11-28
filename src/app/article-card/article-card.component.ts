@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Article } from '../shared/models/article.model';
 
@@ -10,15 +11,21 @@ import { Article } from '../shared/models/article.model';
 export class ArticleCardComponent implements OnInit {
 
   @Input() article!: Article;
-  @Output() changeTitle = new EventEmitter<string>();
+  @Output() viewDetail = new EventEmitter<number>();
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
-  onChangeTitle(): void {
-    this.changeTitle.emit('Title Changed!!!!!');
+  onViewDetail(): void {
+    this.viewDetail.emit(this.article.id);
+  }
+
+  editArticle(): void {
+    this.router.navigate(['article-edit']);
   }
 
 }

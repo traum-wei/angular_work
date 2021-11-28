@@ -8,7 +8,7 @@ export class AuthService {
  private userInfo: UserInfo = {
    account: 'P039',
    name: 'Tomas',
-   role: 'GENERAL'
+   role: 'ADMIN'
  };
 
  constructor() { }

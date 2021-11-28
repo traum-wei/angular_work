@@ -13,6 +13,9 @@ import { HasAdminPermissionDirective } from './shared/directives/has-admin-permi
 import { LoginComponent } from './login/login.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
 import { ErrorHandleInterceptor } from './shared/interceptor/error-handle.interceptor';
+import { ArticleAllComponent } from './article-list/article-all/article-all.component';
+import { ArticleDetailComponent } from './article-list/article-detail/article-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ErrorHandleInterceptor } from './shared/interceptor/error-handle.interc
     ArticleCardComponent,
     HasAdminPermissionDirective,
     LoginComponent,
-    ArticleEditComponent
+    ArticleEditComponent,
+    ArticleAllComponent,
+    ArticleDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,6 @@ import { ErrorHandleInterceptor } from './shared/interceptor/error-handle.interc
       useClass: ErrorHandleInterceptor,
       multi: true
     }
-
   ],
   bootstrap: [AppComponent]
 })

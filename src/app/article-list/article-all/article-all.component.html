@@ -1,0 +1,10 @@
+<div style="display: flex; flex-wrap: wrap;">
+  <app-article-card
+    *ngFor="let article of articleList; first as isFirst"
+    [class.col-lg-6]="!isFirst"
+    style="padding: 10px"
+    [article]="article"
+    (viewDetail)="viewArticleDetail($event)">
+  </app-article-card>
+</div>
+

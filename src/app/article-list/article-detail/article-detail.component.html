@@ -1,4 +1,4 @@
-<div class="card mb-4">
+<div class="mb-4" *ngIf="article">
   <a>
     <img
       class="card-img-top"
@@ -13,13 +13,8 @@
       <p class="card-text">{{ article.description}}</p>
       <a
         class="btn btn-primary"
-        (click)="onViewDetail()"
+        (click)="goBack()"
       >
-        Read More
+        Back
       </a>
-      <a
-        class="btn btn-primary mx-3"
-        (click)="editArticle()"
-        *appHasAdminPermission>Edit</a>
-  </div>
 </div>
