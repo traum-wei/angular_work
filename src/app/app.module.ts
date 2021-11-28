@@ -16,6 +16,7 @@ import { ErrorHandleInterceptor } from './shared/interceptor/error-handle.interc
 import { ArticleAllComponent } from './article-list/article-all/article-all.component';
 import { ArticleDetailComponent } from './article-list/article-detail/article-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ArticleEditListComponent } from './article-edit-list/article-edit-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ArticleEditComponent,
     ArticleAllComponent,
     ArticleDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ArticleEditListComponent
   ],
   imports: [
     BrowserModule,

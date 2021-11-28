@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let article of articleEditList">
+      <th scope="row">{{ article.id }}</th>
+      <td>{{ article.title }}</td>
+      <td>{{ article.createDate }}</td>
+      <td>
+        <div class="btn btn-primary" (click)="editArticle(article.id!)">
+          Edit
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
