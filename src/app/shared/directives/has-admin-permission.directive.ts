@@ -16,7 +16,7 @@ export class HasAdminPermissionDirective {
   }
 
  private createDOMwhenUserIsAdmin(): void {
-   const userIsAdmin = this.authService.getUserInfo().role === 'ADMIN';
+   const userIsAdmin = this.authService.getUserInfo()?.role === 'ADMIN';
    if (userIsAdmin) {
      this.viewContainer.createEmbeddedView(this.templateRef);
    }

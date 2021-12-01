@@ -1,18 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AuthService, UserInfo } from './../shared/services/auth.service';
+
 @Component({
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
   }
 
-  doSubmit(formData: any): void {
-    console.log('FormData', formData);
+  doSubmit(formData: UserInfo): void {
+    const loginData: UserInfo = {
+      ...formData,
+      role: 'ADMIN'
+    };
+
+    this.authService.login(loginData);
   }
 
 }
