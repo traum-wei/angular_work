@@ -8,12 +8,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ArticleEditListComponent } from './article-edit-list/article-edit-list.component';
 import { ArticleDetailComponent } from './article-list/article-detail/article-detail.component';
 import { ArticleAllComponent } from './article-list/article-all/article-all.component';
+import { LoginGuard } from './shared/guard/login.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'article-list',
     component: ArticleListComponent,
+    canActivate: [LoginGuard],
     children: [
       {
         path: '',
@@ -28,6 +30,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'article-edit',
+    canActivate: [LoginGuard],
     children: [
       {
         path: '',
@@ -39,7 +42,11 @@ const routes: Routes = [
       }
     ]
   },
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+    canActivate: [LoginGuard],
+   }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
