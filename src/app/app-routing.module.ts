@@ -9,6 +9,7 @@ import { ArticleEditListComponent } from './article-edit-list/article-edit-list.
 import { ArticleDetailComponent } from './article-list/article-detail/article-detail.component';
 import { ArticleAllComponent } from './article-list/article-all/article-all.component';
 import { LoginGuard } from './shared/guard/login.guard';
+import { EditArticleGuard } from './shared/guard/edit-article.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -38,7 +39,8 @@ const routes: Routes = [
       },
       {
         path: ':articleId',
-        component: ArticleEditComponent
+        component: ArticleEditComponent,
+        canDeactivate: [EditArticleGuard]
       }
     ]
   },
